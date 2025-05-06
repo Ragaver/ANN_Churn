@@ -1,11 +1,11 @@
 #Library
 import streamlit as st
-import joblib
+import pickle
 from tensorflow.keras.models import load_model
 import pandas as pd
 
 #Loading models
-preprocessor = joblib.load('preprocessor.pkl')
+preprocessor = pickle.load('preprocessor.pkl')
 model = load_model('model.h5')
 
 #Streamlit
