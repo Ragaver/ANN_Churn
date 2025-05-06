@@ -5,7 +5,9 @@ from tensorflow.keras.models import load_model
 import pandas as pd
 
 #Loading models
-preprocessor = pickle.load('preprocessor.pkl')
+with open('preprocessor.pkl', 'rb') as f:
+    preprocessor = pickle.load(f) 
+
 model = load_model('model.h5')
 
 #Streamlit
